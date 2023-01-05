@@ -32,6 +32,6 @@ public class Thrower implements Serializable {
     private String countryOfOrigin;
     @Column(name = "thr_power")
     private String power;
-    @Column(name = "thr_is_active")
-    private Boolean isActive;
+    @Column(name = "thr_load")
+    private Float load;
 }
