@@ -1,7 +1,7 @@
 package com.sofka.spacecraft.controller;
 
-import com.sofka.spacecraft.domain.Thrower;
-import com.sofka.spacecraft.service.ThrowerService;
+import com.sofka.spacecraft.domain.Unmanned;
+import com.sofka.spacecraft.service.UnmannedService;
 import com.sofka.spacecraft.utility.Response;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,42 +14,42 @@ import java.util.Map;
 
 @Slf4j
 @RestController
-public class ThrowerController {
+public class UnmannedController {
     @Autowired
-    private ThrowerService throwerService;
+    private UnmannedService unmannedService;
 
-    @GetMapping(path = "/api/v1/list/thrower")
-    public ResponseEntity<Response> getThrowers(Thrower thrower){
+    @GetMapping(path = "/api/v1/list/unmanned")
+    public ResponseEntity<Response> getUnmanneds(Unmanned unmanned){
         return ResponseEntity.ok(
                 Response.builder()
                         .timeStamp(LocalDateTime.now())
-                        .data(Map.of("Throwers", throwerService.list()))
-                        .message("Throwers listed")
+                        .data(Map.of("Unmanneds", unmannedService.list()))
+                        .message("Unmanneds listed")
                         .status(HttpStatus.OK)
                         .statusCode(HttpStatus.OK.value())
                         .build()
         );
     }
-    @PostMapping(path = "/api/v1/create/thrower")
-    public ResponseEntity<Response> createThrower(Thrower thrower){
+    @PostMapping(path = "/api/v1/create/unmanned")
+    public ResponseEntity<Response> createUnmanned(Unmanned unmanned){
         return ResponseEntity.ok(
                 Response.builder()
                         .timeStamp(LocalDateTime.now())
-                        .data(Map.of("Thrower", throwerService.createThrower(thrower)))
-                        .message("Thrower created")
+                        .data(Map.of("Unmanned", unmannedService.createUnmanned(unmanned)))
+                        .message("Unmanned created")
                         .status(HttpStatus.CREATED)
                         .statusCode(HttpStatus.CREATED.value())
                         .build()
         );
     }
 
-    @DeleteMapping(path = "/api/v1/delete/thrower/{id}")
-    public ResponseEntity<Response> deleteThrower(@PathVariable("id") Long id){
+    @DeleteMapping(path = "/api/v1/delete/unmanned/{id}")
+    public ResponseEntity<Response> deleteUnmanned(@PathVariable("id") Long id){
         return ResponseEntity.ok(
                 Response.builder()
                         .timeStamp(LocalDateTime.now())
-                        .data(Map.of("Deleted", throwerService.delete(id)))
-                        .message("Thrower deleted")
+                        .data(Map.of("Deleted", unmannedService.delete(id)))
+                        .message("Unmanned deleted")
                         .status(HttpStatus.OK)
                         .statusCode(HttpStatus.OK.value())
                         .build()
