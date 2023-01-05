@@ -17,21 +17,24 @@ import java.io.Serializable;
  */
 @Data
 @Entity
-@Table(name = "thrower")
-public class Thrower implements Serializable {
+@Table(name = "unmanned")
+public class Unmanned implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "thr_id")
+    @Column(name = "unm_id")
     private Long id;
-    @Column(name = "thr_name")
+    @Column(name = "unm_name")
     private String name;
-    @Column(name = "thr_year")
+    @Column(name = "unm_year")
     private int year;
-    @Column(name = "thr_country_of_origin")
+    @Column(name = "unm_country_of_origin")
     private String countryOfOrigin;
-    @Column(name = "thr_power")
+    @Column(name = "unm_power")
     private String power;
-    @Column(name = "thr_load")
-    private Float load;
+    @Column(name = "unm_init_pushing_force")
+    private Float initPushingForce;
+    @Column(name = "unm_is_active")
+    private Boolean isActive;
+
 }
