@@ -20,7 +20,7 @@ public class Manned2Controller {
     @Autowired
     private Manned2Service manned2Service;
     @GetMapping(path = "/api/v1/list/manned2")
-    public ResponseEntity<Response> getManned2s(Manned2 manned2){
+    public ResponseEntity<Response> getManned2s(){
         return ResponseEntity.ok(
                 Response.builder()
                         .timeStamp(LocalDateTime.now())
@@ -50,6 +50,71 @@ public class Manned2Controller {
                         .timeStamp(LocalDateTime.now())
                         .data(Map.of("Manned", manned2Service.delete(id)))
                         .message("Manned type 2 deleted")
+                        .status(HttpStatus.OK)
+                        .statusCode(HttpStatus.OK.value())
+                        .build()
+        );
+    }
+
+    @PatchMapping(path = "/api/v1/update/manned2/{id}/name")
+    public ResponseEntity<Response> updateName(@PathVariable("id") Integer id, @RequestBody Manned2 manned2){
+        return ResponseEntity.ok(
+                Response.builder()
+                        .timeStamp(LocalDateTime.now())
+                        .data(Map.of("Manned", manned2Service.updateName(id, manned2)))
+                        .message("Manned updated")
+                        .status(HttpStatus.OK)
+                        .statusCode(HttpStatus.OK.value())
+                        .build()
+        );
+    }
+
+    @PatchMapping(path = "/api/v1/update/manned2/{id}/power")
+    public ResponseEntity<Response> updatePower(@PathVariable("id") Integer id, @RequestBody Manned2 manned2){
+        return ResponseEntity.ok(
+                Response.builder()
+                        .timeStamp(LocalDateTime.now())
+                        .data(Map.of("Manned", manned2Service.updatePower(id, manned2)))
+                        .message("Manned updated")
+                        .status(HttpStatus.OK)
+                        .statusCode(HttpStatus.OK.value())
+                        .build()
+        );
+    }
+
+    @PatchMapping(path = "/api/v1/update/manned2/{id}/year")
+    public ResponseEntity<Response> updateYear(@PathVariable("id") Integer id, @RequestBody Manned2 manned2){
+        return ResponseEntity.ok(
+                Response.builder()
+                        .timeStamp(LocalDateTime.now())
+                        .data(Map.of("Manned", manned2Service.updateYear(id, manned2)))
+                        .message("Manned updated")
+                        .status(HttpStatus.OK)
+                        .statusCode(HttpStatus.OK.value())
+                        .build()
+        );
+    }
+
+    @PatchMapping(path = "/api/v1/update/manned2/{id}/country")
+    public ResponseEntity<Response> updateCountry(@PathVariable("id") Integer id, @RequestBody Manned2 manned2){
+        return ResponseEntity.ok(
+                Response.builder()
+                        .timeStamp(LocalDateTime.now())
+                        .data(Map.of("Manned", manned2Service.updateCountry(id, manned2)))
+                        .message("Manned updated")
+                        .status(HttpStatus.OK)
+                        .statusCode(HttpStatus.OK.value())
+                        .build()
+        );
+    }
+
+    @PatchMapping(path = "/api/v1/update/manned2/{id}/ncrew")
+    public ResponseEntity<Response> updateNCrew(@PathVariable("id") Integer id, @RequestBody Manned2 manned2){
+        return ResponseEntity.ok(
+                Response.builder()
+                        .timeStamp(LocalDateTime.now())
+                        .data(Map.of("Manned", manned2Service.updateNCrew(id, manned2)))
+                        .message("Manned updated")
                         .status(HttpStatus.OK)
                         .statusCode(HttpStatus.OK.value())
                         .build()

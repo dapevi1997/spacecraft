@@ -2,6 +2,7 @@ package com.sofka.spacecraft.controller;
 
 import com.sofka.spacecraft.domain.Manned1;
 
+import com.sofka.spacecraft.repository.Manned1Repository;
 import com.sofka.spacecraft.service.Manned1Service;
 import com.sofka.spacecraft.utility.Response;
 import lombok.extern.slf4j.Slf4j;
@@ -17,9 +18,11 @@ import java.util.Map;
 @RestController
 public class Manned1Controller {
     @Autowired
+    private Manned1Repository manned1Repository;
+    @Autowired
     private Manned1Service manned1Service;
     @GetMapping(path = "/api/v1/list/manned1")
-    public ResponseEntity<Response> getManned1s(Manned1 manned1){
+    public ResponseEntity<Response> getManned1s(){
         return ResponseEntity.ok(
                 Response.builder()
                         .timeStamp(LocalDateTime.now())
@@ -49,6 +52,71 @@ public class Manned1Controller {
                         .timeStamp(LocalDateTime.now())
                         .data(Map.of("Manned", manned1Service.delete(id)))
                         .message("Manned deleted")
+                        .status(HttpStatus.OK)
+                        .statusCode(HttpStatus.OK.value())
+                        .build()
+        );
+    }
+
+    @PatchMapping(path = "/api/v1/update/manned1/{id}/name")
+    public ResponseEntity<Response> updateName(@PathVariable("id") Integer id, @RequestBody Manned1 manned1){
+                return ResponseEntity.ok(
+                Response.builder()
+                        .timeStamp(LocalDateTime.now())
+                        .data(Map.of("Manned", manned1Service.updateName(id, manned1)))
+                        .message("Manned updated")
+                        .status(HttpStatus.OK)
+                        .statusCode(HttpStatus.OK.value())
+                        .build()
+        );
+    }
+
+    @PatchMapping(path = "/api/v1/update/manned1/{id}/power")
+    public ResponseEntity<Response> updatePower(@PathVariable("id") Integer id, @RequestBody Manned1 manned1){
+        return ResponseEntity.ok(
+                Response.builder()
+                        .timeStamp(LocalDateTime.now())
+                        .data(Map.of("Manned", manned1Service.updatePower(id, manned1)))
+                        .message("Manned updated")
+                        .status(HttpStatus.OK)
+                        .statusCode(HttpStatus.OK.value())
+                        .build()
+        );
+    }
+
+    @PatchMapping(path = "/api/v1/update/manned1/{id}/year")
+    public ResponseEntity<Response> updateYear(@PathVariable("id") Integer id, @RequestBody Manned1 manned1){
+        return ResponseEntity.ok(
+                Response.builder()
+                        .timeStamp(LocalDateTime.now())
+                        .data(Map.of("Manned", manned1Service.updateYear(id, manned1)))
+                        .message("Manned updated")
+                        .status(HttpStatus.OK)
+                        .statusCode(HttpStatus.OK.value())
+                        .build()
+        );
+    }
+
+    @PatchMapping(path = "/api/v1/update/manned1/{id}/country")
+    public ResponseEntity<Response> updateCountry(@PathVariable("id") Integer id, @RequestBody Manned1 manned1){
+        return ResponseEntity.ok(
+                Response.builder()
+                        .timeStamp(LocalDateTime.now())
+                        .data(Map.of("Manned", manned1Service.updateCountry(id, manned1)))
+                        .message("Manned updated")
+                        .status(HttpStatus.OK)
+                        .statusCode(HttpStatus.OK.value())
+                        .build()
+        );
+    }
+
+    @PatchMapping(path = "/api/v1/update/manned1/{id}/ncrew")
+    public ResponseEntity<Response> updateNCrew(@PathVariable("id") Integer id, @RequestBody Manned1 manned1){
+        return ResponseEntity.ok(
+                Response.builder()
+                        .timeStamp(LocalDateTime.now())
+                        .data(Map.of("Manned", manned1Service.updateNCrew(id, manned1)))
+                        .message("Manned updated")
                         .status(HttpStatus.OK)
                         .statusCode(HttpStatus.OK.value())
                         .build()
