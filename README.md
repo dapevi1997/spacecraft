@@ -48,5 +48,5 @@ Teniendo en cuenta el contexto anterior, deberás realizar lo siguiente:
 ![](https://dashboard.snapcraft.io/site_media/appmedia/2017/10/logo_zjwX5FR.png)
 
 ### Autor
-@Nirsch95 - Andrés Castro :wolf:
-@dapevi1997 - Daniel Peréz
+[@Nirsch95](https://github.com/Nirsch95) - Andrés Castro :wolf:
+[@dapevi1997](https://github.com/dapevi1997) - Daniel Peréz
