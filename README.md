@@ -26,14 +26,26 @@ Teniendo en cuenta el contexto anterior, deberás realizar lo siguiente:
 ![](https://moaramoredotcom.files.wordpress.com/2016/05/2-naves-tripuladas.jpg)
 
 ### Tecnologias :wrench:
+
 * Java
+
 ![](https://cdn-icons-png.flaticon.com/512/5968/5968282.png)
+
+*MySQL
+
+![](https://styles.redditmedia.com/t5_2qm6k/styles/communityIcon_dhjr6guc03x51.png?width=256&s=3e825b7205c7f497d4695028e358d26ee359f84b)
+
 * Spring Boot
-![](https://miro.medium.com/max/500/1*AbiX4LwtSNozoyfypcKvEg.png)
+
+![](https://miro.medium.com/max/256/0*Qrh5x0L5XWFRvA9P.png)
+
 * Swagger UI
+
 ![](https://static-00.iconduck.com/assets.00/swagger-icon-512x512-halz44im.png)
+
 * IntelliJ IDEA
-![](https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/IntelliJ_IDEA_Icon.svg/2048px-IntelliJ_IDEA_Icon.svg.png)
+
+![](https://dashboard.snapcraft.io/site_media/appmedia/2017/10/logo_zjwX5FR.png)
 
 ### Autor
 @Nirsch95 - Andrés Castro :wolf:
