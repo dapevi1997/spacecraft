@@ -26,7 +26,6 @@ public class ThrowerController {
 
     @GetMapping(path = "/api/v1/list/thrower")
     public ResponseEntity<Response> getThrowers(){
-
             return ResponseEntity.ok(
                     Response.builder()
                             .timeStamp(LocalDateTime.now())
@@ -36,9 +35,6 @@ public class ThrowerController {
                             .statusCode(HttpStatus.OK.value())
                             .build()
             );
-
-
-
         }
 
 
