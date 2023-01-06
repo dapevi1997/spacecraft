@@ -9,8 +9,7 @@ Teniendo en cuenta el contexto anterior, deberás realizar lo siguiente:
 
 1.	Realizar una extracción de atributos genéricos, que puedas identificar en el artículo. Crear las tablas y modelos con sus respectivos servicios que creas convenientes según la lectura.
 2.	Crear al menos cinco atributos de una nave.
-3	  Crear al menos cuatro tipos de naves diferentes con diferentes comportamiento, si es posible hacer una sobrecarga y una sobreescritura de métodos.
-4.	El programa debe tener una ejecución infinita, hasta que el usuario no diga que quiere terminar el programa, este no deberá culminar.
+3.	Crear al menos cuatro tipos de naves diferentes con diferentes comportamiento, si es posible hacer una sobrecarga y una sobreescritura de métodos.
 
 # CRUD (Create, Read, Update, Delete)
 
