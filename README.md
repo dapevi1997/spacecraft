@@ -41,7 +41,7 @@ Teniendo en cuenta el contexto anterior, deberás realizar lo siguiente:
 
 * Swagger UI
 
-![](https://static-00.iconduck.com/assets.00/swagger-icon-512x512-halz44im.png)
+![](https://static-00.iconduck.com/assets.00/swagger-icon-256x256-j80nuve7.png)
 
 * IntelliJ IDEA
 
