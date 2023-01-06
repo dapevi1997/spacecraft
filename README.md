@@ -29,7 +29,7 @@ Teniendo en cuenta el contexto anterior, deberás realizar lo siguiente:
 
 * Java
 
-![](https://cdn-icons-png.flaticon.com/512/5968/5968282.png)
+![]([https://cdn-icons-png.flaticon.com/512/5968/5968282.png](https://icons.iconarchive.com/icons/papirus-team/papirus-apps/256/java-icon.png))
 
 *MySQL
 
