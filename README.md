@@ -29,9 +29,9 @@ Teniendo en cuenta el contexto anterior, deberás realizar lo siguiente:
 
 * Java
 
-![]([https://cdn-icons-png.flaticon.com/512/5968/5968282.png](https://icons.iconarchive.com/icons/papirus-team/papirus-apps/256/java-icon.png))
+![](https://gabrielaugusto.me/wp-content/uploads/2021/06/Java_Logo.png)
 
-*MySQL
+* MySQL
 
 ![](https://styles.redditmedia.com/t5_2qm6k/styles/communityIcon_dhjr6guc03x51.png?width=256&s=3e825b7205c7f497d4695028e358d26ee359f84b)
 
