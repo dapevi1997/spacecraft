@@ -26,16 +26,22 @@ public class ThrowerController {
 
     @GetMapping(path = "/api/v1/list/thrower")
     public ResponseEntity<Response> getThrowers(){
-        return ResponseEntity.ok(
-                Response.builder()
-                        .timeStamp(LocalDateTime.now())
-                        .data(Map.of("Throwers", throwerService.list()))
-                        .message("Throwers listed")
-                        .status(HttpStatus.OK)
-                        .statusCode(HttpStatus.OK.value())
-                        .build()
-        );
-    }
+
+            return ResponseEntity.ok(
+                    Response.builder()
+                            .timeStamp(LocalDateTime.now())
+                            .data(Map.of("Throwers", throwerService.list()))
+                            .message("Throwers listed")
+                            .status(HttpStatus.OK)
+                            .statusCode(HttpStatus.OK.value())
+                            .build()
+            );
+
+
+
+        }
+
+
     @PostMapping(path = "/api/v1/create/thrower")
     public ResponseEntity<Response> createThrower(Thrower thrower){
         return ResponseEntity.ok(
