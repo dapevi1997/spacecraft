@@ -6,6 +6,7 @@ import com.sofka.spacecraft.service.interfaces.IThrower;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Collection;
 
@@ -31,6 +32,36 @@ public class ThrowerService implements IThrower {
     public Boolean delete(Long id) {
         log.info("Eliminando nave Lanzadera con id: {}", id);
         throwerRepository.deleteById(id);
+        return Boolean.TRUE;
+    }
+    @Transactional
+    public Boolean updateNameThrower(Long id, Thrower thrower){
+        log.info("Actualizando nave Lanzadera con id: {}", id);
+        throwerRepository.updateNameThrower(id, thrower.getName());
+        return Boolean.TRUE;
+    }
+    @Transactional
+    public Boolean updateYearThrower(Long id, Thrower thrower){
+        log.info("Actualizando nave Lanzadera con id: {}", id);
+        throwerRepository.updateYearThrower(id, thrower.getYear());
+        return Boolean.TRUE;
+    }
+    @Transactional
+    public Boolean updateCountryThrower(Long id, Thrower thrower){
+        log.info("Actualizando nave Lanzadera con id: {}", id);
+        throwerRepository.updateCountryThrower(id, thrower.getCountryOfOrigin());
+        return Boolean.TRUE;
+    }
+    @Transactional
+    public Boolean updatePowerThrower(Long id, Thrower thrower){
+        log.info("Actualizando nave Lanzadera con id: {}", id);
+        throwerRepository.updatePowerThrower(id, thrower.getPower());
+        return Boolean.TRUE;
+    }
+    @Transactional
+    public Boolean updateLoadThrower(Long id, Thrower thrower){
+        log.info("Actualizando nave Lanzadera con id: {}", id);
+        throwerRepository.updateLoadThrower(id, thrower.getLoad());
         return Boolean.TRUE;
     }
 }
